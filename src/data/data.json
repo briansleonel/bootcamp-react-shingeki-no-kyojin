@@ -1,0 +1,81 @@
+{
+    "characters" : [
+        {
+            "firstName" : "Eren",
+            "lastName" : "Jaeger",
+            "dateBirth" : "30 de marzo",
+            "species": "Humano - Titán Cambiante",
+            "occupation": "Soldado de élite",
+            "friends" : ["Armin Arlert", "Mikasa Ackerman", "Annie Leonhart"],
+            "titans" : ["Titán de ataque", "Titán Fundador", "Titán martillo de guerra"],
+            "weapons" :["Equipo de Maniobras Tridimensional", "Cuchillas"],
+            "photo" : ""
+        },
+        {
+            "firstName" : "Mikasa",
+            "lastName" : "Ackerman",
+            "dateBirth" : "10 de febrero",
+            "species": "Humana",
+            "occupation": "Soldado de élite",
+            "friends" : ["Armin Arlert", "Eren Jaeger", "Jean Kirstein", "Reiner Braun"],
+            "titans" : [],
+            "weapons" :["Equipo de Maniobras Tridimensional", "Cuchillas", "Lanza relámpagos", "Equipo de maniobras anti-personal"],
+            "photo" : ""
+        } ,
+        {
+            "firstName" : "Armin",
+            "lastName" : "Arlert",
+            "dateBirth" : "3 de noviembre",
+            "species": "Humano - Titán Cambiante",
+            "occupation": "Soldado de élite",
+            "friends" : ["Mikasa Ackerman", "Eren Jaeger", "Jean Kirstein", "Reiner Braun"],
+            "titans" : ["Titán colosal"],
+            "weapons" :["Equipo de Maniobras Tridimensional", "Cuchillas"],
+            "photo" : ""
+        },
+        {
+            "firstName" : "Levi",
+            "lastName" : "Ackerman",
+            "dateBirth" : "25 de diciembre",
+            "species": "Humano",
+            "occupation": "Capitán",
+            "friends" : ["Armin Arlert", "Eren Jaeger", "Hange Zoe", "Erwin Smith"],
+            "titans" : [],
+            "weapons" :["Equipo de Maniobras Tridimensional", "Cuchillas", "Lanza relámpagos"],
+            "photo" : ""
+        },
+        {
+            "firstName" : "Zeke",
+            "lastName" : "Jaeger",
+            "dateBirth" : "1 de agosto",
+            "species": "Humano - Titán Cambiante",
+            "occupation": "Guerrero",
+            "friends" : ["Reiner Braun", "Bertolt Hoover"],
+            "titans" : ["Titán bestia"],
+            "weapons" :[],
+            "photo" : ""
+        },
+        {
+            "firstName" : "Historia",
+            "lastName" : "Reiss",
+            "dateBirth" : "15 de enero",
+            "species": "Humana",
+            "occupation": "Reina",
+            "friends" : ["Armin Arlert", "Eren Jaeger", "Ymir"],
+            "titans" : [],
+            "weapons" :["Equipo de Maniobras Tridimensional", "Cuchillas"],
+            "photo" : ""
+        },
+        {
+            "firstName" : "Pieck",
+            "lastName" : "Finger",
+            "dateBirth" : "5 de agosto",
+            "species": "Humana - Titán Cambiante",
+            "occupation": "Guerrera",
+            "friends" : ["Gabi Braun", "Porco Galliard", "Reiner Braun"],
+            "titans" : ["Titán carguero"],
+            "weapons" :[],
+            "photo" : ""
+        }
+    ]
+}

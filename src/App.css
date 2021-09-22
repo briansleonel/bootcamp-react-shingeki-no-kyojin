@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+nav {
+    background-color: #2E4053;
+    color: #fff;
+    padding: 10px 40px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav h1 {
+    margin: 0;
+    font-size: 3em;
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+nav ul li {
+    display: inline-block;
 }
 
-.App-link {
-  color: #61dafb;
+.hover-transform {
+    text-decoration: none;
+    color: #bdc1c5;
+    text-transform: uppercase;
+    position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hover-transform::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #ff7a00;
+    border-radius: 100px;
+    bottom: -2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s;
+}
+
+.hover-transform:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+footer {
+    background-color: #283747;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer div {
+    width: 50%;
+    padding: 0 2em;
 }
