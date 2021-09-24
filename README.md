@@ -25,7 +25,11 @@ _Ahora tendrás que ejecutar el proyecto, con el suiguiente comando_
 ```
 npm start
 ```
-_Esto lo que hará es iniciar la aplicación en el puerto (http://localhost:3000), así poder visualizar el mismo.
+_Esto lo que hará es iniciar la aplicación en el puerto (http://localhost:3000), así poder visualizar el mismo._
+
+## Demo en vivo
+
+_Se puede ver el proyecto construido, accediendo desde el siguiente enlace: [Shingeki no kyojin](https://briansleonel.github.io/shingeki-no-kyojin/)_
 
 ## Construido con 🛠️
 
