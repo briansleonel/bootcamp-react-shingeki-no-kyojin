@@ -1,5 +1,7 @@
 import React from "react";
 
+import Character from "../character";
+
 class Home extends React.Component {
     constructor(props) {
         super(props);
@@ -7,10 +9,20 @@ class Home extends React.Component {
     }
 
     render() {
+
+        const characters = this.props.charactersData.map((element) => {
+            return <Character img={element.photo} fullName={`${element.firstName} ${element.lastName}`} />
+        })
+
         return(
-            <section>
-                
-            </section>
+            <>
+                <section className="home">
+                    <h3 className="title">Personajes</h3>
+                    <div className="home-characters">
+                        {characters}
+                    </div>
+                </section>
+            </>
         )
     }
 

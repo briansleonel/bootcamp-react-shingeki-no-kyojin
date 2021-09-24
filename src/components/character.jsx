@@ -7,13 +7,16 @@ class Character extends React.Component {
     }
 
     render() {
+
+
         return(
-            <div>
-                <img src={this.props.photo} alt="" />
+            <div className="card-characters">
+                <img src={this.props.img} alt="" />
                 <h4> {this.props.fullName} </h4>
             </div>
         )
     }
 }
+
 
 export default Character;

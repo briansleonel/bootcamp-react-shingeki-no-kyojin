@@ -1,21 +1,43 @@
-nav {
-    background-color: #2E4053;
-    color: #fff;
-    padding: 10px 40px;
+* {
+    font-family: 'Montserrat', sans-serif;
 }
 
-nav h1 {
-    margin: 0;
-    font-size: 3em;
+/*
+                        NAVBAR
+    --------------------------------------------------------------------------------------------
+*/
+
+nav {
+    background-color: #24292f;
+    color: #fff;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav div {
+    display: flex;
+    width: 35%;
+    padding: 0;
+}
+
+nav div img {
+    width: 50px;
+}
+
+nav div h1 {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 20px;
+    font-size: 1.8em;
     text-align: center;
-    font-weight: 400;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 nav ul {
     display: flex;
     justify-content: space-around;
-    margin-top: 30px;
+    width: 60%;
 }
 
 nav ul li {
@@ -24,9 +46,10 @@ nav ul li {
 
 .hover-transform {
     text-decoration: none;
-    color: #bdc1c5;
+    color: #cfcfcf;
     text-transform: uppercase;
     position: relative;
+    font-size: 1.2em;
 }
 
 .hover-transform::before {
@@ -46,6 +69,66 @@ nav ul li {
     transform: scaleX(1);
     transform-origin: left;
 }
+
+/*
+                                HOME
+    ------------------------------------------------------------------------------
+*/
+
+.home, .character-details {
+    margin: 50px 0;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.3em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 400;
+    margin: 0 20px;
+    border-bottom: 1px solid black
+}
+
+.home-characters {
+    margin: 0;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-characters {
+    border-radius: 7px;
+    display: inline-block;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(204,202,204,1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(204,202,204,1);
+    box-shadow: 0px 0px 10px 0px rgba(204,202,204,1);
+}
+
+.card-characters img {
+    width: 200px;
+}
+
+.card-characters h4 {
+    font-size: 1em;
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+}
+
+/*
+                        CHARACTERS DETAILS
+    ----------------------------------------------------------------------------
+*/
+
+.select-character {
+    padding: 7px;
+    font-size: 1em;
+}
+
+/* 
+                        FOOTER
+    ---------------------------------------------------------------------------
+*/
 
 footer {
     background-color: #283747;
