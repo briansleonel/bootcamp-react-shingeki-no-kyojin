@@ -7,8 +7,6 @@ class Character extends React.Component {
     }
 
     render() {
-
-
         return(
             <div className="card-characters">
                 <img src={this.props.img} alt="" />

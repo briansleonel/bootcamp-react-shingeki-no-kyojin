@@ -17,8 +17,8 @@ class Navbar extends React.Component {
                 </div>
                 
                 <ul>
-                    <Link link="#" description="Detalle de personajes" />
-                    <Link link="#" description="Acerca de" />
+                    <Link link="#character-details" description="Detalle de personajes" />
+                    <Link link="#about" description="Acerca de" />
                 </ul>
             </nav>
         )

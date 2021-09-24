@@ -7,7 +7,7 @@ import characters from "./data/data.json";
 import Navbar from './components/layout/navbar';
 import About from './components/layout/about';
 import Home from './components/layout/home';
-import CharacterDetail from './components/character-datail';
+import CharacterDetail from './components/character-details/character-datail.jsx';
 
 class App extends React.Component {
   constructor() {

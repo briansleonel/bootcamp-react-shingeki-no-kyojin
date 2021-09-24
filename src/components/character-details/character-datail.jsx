@@ -1,4 +1,5 @@
 import React from "react";
+import CardCharacterSelected from "./card-character";
 
 class CharacterDetail extends React.Component {
 
@@ -21,26 +22,24 @@ class CharacterDetail extends React.Component {
     }
 
     render() {
-        console.log(this.state)
         const characters = this.props.charactersData.map((element) => {
             return <option value={element._id}> {`${element.firstName} ${element.lastName}`} </option>
         })
 
         return(
             <>
-                <section className="character-details">
+                <section className="" id="character-details">
                     <h4 className="title">Detalle de los personajes</h4>
-                    <div className="">
-                        <form action="">
-                            <label htmlFor="characterDetail">Elija una opción</label>
-                            <select className="select-character" name="characterDetail" id="characterDetail" onChange={event => this.onChangeSelect(event)}>
+                        
+                    <div className="character-details">
+                        <form className="select-character" action="">
+                            <label htmlFor="characterDetail">Seleccione un personaje:</label>
+                            <select className="select-character-form" name="characterDetail" id="characterDetail" onChange={event => this.onChangeSelect(event)}>
                                 {characters}
                             </select>
                         </form>
-                    </div>
 
-                    <div>
-                        <h4> {this.state.characterSelected.firstName} </h4>
+                        <CardCharacterSelected character={this.state.characterSelected} />
                     </div>
                 </section>
             </>

@@ -8,7 +8,7 @@ class About extends React.Component {
 
     render() {
         return(
-            <footer>
+            <footer id="about" className="footer">
                 <div>
                     <h4>Acerca de:</h4>
                     <p>
@@ -21,16 +21,16 @@ class About extends React.Component {
                 <div>
                     <h4>Contacto</h4>
                     <p>
-                        <span>González Brian Leonel</span>
+                        Autor: <span className="link-footer">González Brian Leonel</span>
                     </p>
                     <p>
-                        Email: <span>gonzalezbrianleonel76@gmail.com</span>
+                        Email: <span className="link-footer">gonzalezbrianleonel76@gmail.com</span>
                     </p>
                     <p>
-                        Telefono: <span>+54 388 476 2196</span>
+                        Telefono: <a href="https://api.whatsapp.com/send?phone=543884762196&text=" className="link-footer">+54 388 476 2196</a>
                     </p>
                     <p>
-                        Github: <a href="https://github.com/briansleonel">briansleonel</a>
+                        Github: <a href="https://github.com/briansleonel" className="link-footer">briansleonel</a>
                     </p>
                 </div>
             </footer>
