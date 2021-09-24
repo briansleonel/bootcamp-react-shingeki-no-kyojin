@@ -1,6 +1,6 @@
 import React from "react";
 
-import Character from "../character";
+import Character from "../character/character";
 
 class Home extends React.Component {
     constructor(props) {

@@ -91,13 +91,16 @@ nav ul li {
 }
 
 .home-characters {
-    margin: 0;
-    padding: 30px 20px;
-    display: flex;
-    justify-content: space-between;
+    margin: 30px;
+    padding: 0;
+    padding-bottom: 30px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
 }
 
 .card-characters {
+    margin-right: 30px;
     border-radius: 7px;
     display: inline-block;
     -webkit-box-shadow: 0px 0px 10px 0px rgba(204,202,204,1);
@@ -257,4 +260,113 @@ nav ul li {
     color: #ff993a;
     font-style: italic;
     font-weight: 400;
+}
+
+
+@media only screen and (max-width : 900px) {
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav div {
+        width: 100%;
+        padding: 0;
+    }
+
+    nav div h1 {
+        margin: auto;
+        font-size: 1.5em;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        font-size: .8em;
+    }
+
+    nav ul li {
+        margin-top: 10px;
+    }
+
+    .title {
+        font-size: 1.3em;
+    }
+
+    .select-character {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .select-character label {
+        margin: 0;
+        text-align: center;
+        width: 80%;
+    }
+    
+    .select-character-form {
+        margin-top: 20px;
+        padding: 7px;
+        font-size: .8em;
+        width: 80%;
+    }
+
+    .card-character-selected {
+        display: flex;
+        flex-direction: column;
+        margin: 0 20px;
+        padding: 10px;
+    }
+    
+    .character-selected-img {
+        width: 100%;
+        
+    }
+    
+    .character-selected-body {
+        width: 100%;
+        padding: 0;
+        font-size: 1em;
+        font-weight: 300;
+    }
+
+    .character-selected-body blockquote {
+        margin: 20px 0 0 0;
+    }
+
+    .context-phrase {
+        margin-bottom: 0;
+    }
+
+    .phrase {
+        line-height: 20px;
+        text-align: center;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        line-height: 30px;
+        font-size: 1em;
+    }
+    
+    .footer h4 {
+        font-size: 1.2em;
+        font-weight: 600;
+        text-decoration: underline #cfcfcf 1px;
+    }
+    
+    .footer div {
+        width: 100%;
+        padding: 0;
+    }
 }
