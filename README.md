@@ -39,6 +39,10 @@ _Se puede ver el proyecto construido, accediendo desde el siguiente enlace: [Shi
 
 * **González, Brian Leonel** - *Desarrollo del proyecto* - [briansleonel](https://github.com/briansleonel)
 
+## Versión
+
+_Versión 2_
+
 ## Demo
 
 Algunas capturas del proyecto:

@@ -1,20 +1,14 @@
 import React from "react";
 
-class Character extends React.Component {
-    constructor(props) {
-        super(props);
-        this.props = props;
-    }
+const Character = (props) => {
+    const {img, firstName, lastName} = props;
 
-    render() {
-        return(
-            <div className="card-characters">
-                <img src={this.props.img} alt="" />
-                <h4> {this.props.fullName} </h4>
-            </div>
-        )
-    }
+    return(
+        <div className="card-characters" >
+            <img src={img} alt={`Imagen de ${firstName} ${lastName}`} title={`Imagen de ${firstName} ${lastName}`} />
+            <h4> {firstName} {lastName} </h4>
+        </div>
+    )
 }
-
 
 export default Character;

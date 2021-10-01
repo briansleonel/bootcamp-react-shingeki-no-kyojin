@@ -1,50 +1,86 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router";
 import CardCharacterSelected from "./card-character";
 
-class CharacterDetail extends React.Component {
+import isEmptyObject from "../../utils/utils-functions";
+import data from '../../data/data.json';
 
-    constructor(props) {
-        super(props);
-        this.props = props;
+const CharacterDetail = (props) => {
 
-        this.state = {
-            characterSelected : this.props.charactersData[0]
+    const params = useParams();
+    const [showWithParams, setShowWithParams] = useState(false);
+    const [characterSelected, setCharacterSelected] = useState(null);
+
+    useEffect(() => {
+        //location.pathname !== '/charDetail'
+        if(params.idCharacter !== undefined) {
+            setShowWithParams(true);
+        } else {
+            setCharacterSelected(props.charactersData[0])
         }
+    }, [showWithParams, params, props]);
+
+    /*
+    useEffect(() => {
+        if (!isEmptyObject(props.charactersData)) {
+            setCharacterSelected(props.charactersData[0])
+        }
+    }, [props])
+    */
+
+    const mapCharactersOptions = (charactersData) => {
+        return charactersData.map((element) => {
+            return <option key={element._id} value={element._id}> {`${element.firstName} ${element.lastName}`} </option>
+        })
     }
 
-    onChangeSelect = (event) => {
-        this.setState(() => {
-            return {
-                characterSelected : this.props.charactersData.find(element => element._id === event.target.value)
-            }
-        })
-        
+    const charactersOptions = isEmptyObject(props.charactersData) ? null : mapCharactersOptions(props.charactersData);
+
+    const onChangeSelect = (event) => {
+        setCharacterSelected(() => {
+            return props.charactersData.find(element => element._id === event.target.value)
+        }) 
     }
 
-    render() {
-        const characters = this.props.charactersData.map((element) => {
-            return <option value={element._id}> {`${element.firstName} ${element.lastName}`} </option>
-        })
+    const cardWithParams = () => {
+        const character = data.characters.find(element => element._id === params.idCharacter)
 
         return(
-            <>
-                <section className="" id="character-details">
-                    <h4 className="title">Detalle de los personajes</h4>
-                        
-                    <div className="character-details">
-                        <form className="select-character" action="">
-                            <label htmlFor="characterDetail">Seleccione un personaje:</label>
-                            <select className="select-character-form" name="characterDetail" id="characterDetail" onChange={event => this.onChangeSelect(event)}>
-                                {characters}
-                            </select>
-                        </form>
-
-                        <CardCharacterSelected character={this.state.characterSelected} />
-                    </div>
-                </section>
-            </>
+            <CardCharacterSelected character={character} />
         )
-    }
+    }    
+
+    return(
+        <>
+            {
+                (!showWithParams) ? (
+                    <section className="character-details" id="character-details">
+                        <h4 className="title">Detalle de los personajes</h4> 
+                        {
+                            characterSelected !== null ? (
+                                <div className="character-details">
+                                    <form className="select-character" action="">
+                                        <label htmlFor="characterDetail">Seleccione un personaje:</label>
+                                        <select className="select-character-form" name="characterDetail" id="characterDetail" onChange={event => onChangeSelect(event)}>
+                                            {charactersOptions}
+                                        </select>
+                                    </form>
+
+                                    <CardCharacterSelected character={characterSelected} />
+                                </div>
+                            ) : (
+                                <h4>ERROR</h4>
+                            )
+                        }
+                    </section>
+                ) : (
+                    <>
+                        { cardWithParams() }
+                    </>
+                ) 
+            }
+        </>
+    )
 }
 
 export default CharacterDetail;

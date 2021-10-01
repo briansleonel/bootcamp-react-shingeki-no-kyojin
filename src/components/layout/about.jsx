@@ -1,41 +1,39 @@
 import React from "react";
 
-class About extends React.Component {
-    constructor(props) {
-        super(props);
-        this.props = props;
-    }
+const About = () => {
+    return(
+        <section id="about" className="about">
+            <div>
+                <h4>Acerca de...</h4>
+                <p>
+                    &nbsp;Se presenta una Aplicación Web Dinámica, en la cuál se representan algunos de los personajes del anime <a href="https://shingeki-no-kyojin.fandom.com/es/wiki/Categor%C3%ADa:Personajes" className="bold">Shingeki no Kyojin</a>, con una descripción y detalles de cada uno de ellos.
+                    <br />
+                    &nbsp;Toda la información de los personajes que se muestra en esta aplicación, fue usada de la página <a href="https://shingeki-no-kyojin.fandom.com/es/wiki/Shingeki_no_Kyojin_Wiki" className="bold">Shingeki no Kyojin Fandom</a>.
+                </p>
 
-    render() {
-        return(
-            <footer id="about" className="footer">
-                <div>
-                    <h4>Acerca de:</h4>
-                    <p>
-                        Aplicación desarrollada en React JS, con el objetivo de practicar el mismo.
-                        <br />
-                        Se presenta una pequeña aplicación web, en la cuál se representan algunos de los personajes del anime <b>Shingeki no Kyojin</b>, con una descripción y detalles de cada uno de ellos.
-                    </p>
-                </div>
+                <h4>Tecnologías...</h4>
+                <p>
+                    &nbsp;Esta aplicación fue desarrollada con el framework de <a href="https://reactjs.org/" className="bold">React JS</a>, con el objetivo de practicar el uso de la librería. En este proyecto se trabajo con <a href="https://reactjs.org/docs/hooks-intro.html" className="bold">React Hooks</a>, y además se usó <a href="https://reactrouter.com/web/guides/quick-start" className="bold">React Router</a> para trabajar con con rutas y parámetros sobre la aplicación.
+                </p>
+            </div>
 
-                <div>
-                    <h4>Contacto</h4>
-                    <p>
-                        Autor: <span className="link-footer">González Brian Leonel</span>
-                    </p>
-                    <p>
-                        Email: <span className="link-footer">gonzalezbrianleonel76@gmail.com</span>
-                    </p>
-                    <p>
-                        Telefono: <a href="https://api.whatsapp.com/send?phone=543884762196&text=" className="link-footer">+54 388 476 2196</a>
-                    </p>
-                    <p>
-                        Github: <a href="https://github.com/briansleonel" className="link-footer">briansleonel</a>
-                    </p>
-                </div>
-            </footer>
-        )
-    }
+            <div>
+                <h4>Acerca del desarrollador...</h4>
+                <p>
+                    Autor: <a href="https://www.instagram.com/briansleonel/" className="link-about">González Brian Leonel</a>
+                </p>
+                <p>
+                    Email: <a href="mailto:gonzalezbrianleonel76@gmail.com" className="link-about">gonzalezbrianleonel76@gmail.com</a>
+                </p>
+                <p>
+                    Telefono: <a href="https://api.whatsapp.com/send?phone=543884762196&text=" className="link-about">+54 388 476 2196</a>
+                </p>
+                <p>
+                    Github: <a href="https://github.com/briansleonel" className="link-about">briansleonel</a>
+                </p>
+            </div>
+        </section>
+    )
 }
 
 export default About;

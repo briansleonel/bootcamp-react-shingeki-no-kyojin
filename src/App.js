@@ -1,38 +1,52 @@
 import './App.css';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-import characters from "./data/data.json";
-//import appData from "./data/app-data.json";
+import charactersData from "./data/data.json";
 
 import Navbar from './components/layout/navbar';
 import About from './components/layout/about';
 import Home from './components/layout/home';
 import CharacterDetail from './components/character-details/character-datail.jsx';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-class App extends React.Component {
-  constructor() {
-    super();
+function App() {
 
-    this.state = {
+  // Seteo los characters en un objeto vacío cuando se monta el componente
+  const [charactersInfo, setCharactersInfo] = useState({});
 
-    }
+  // Cuando se monta el componente, establezco en el estado de los characters, la lista de characters de data.json
+  useEffect(() => {
+    setCharactersInfo(() => {
+      return charactersData.characters
+    });
+  }, [])
 
-    
-  }
 
-  render() {
-    return(
-      <>
-        <Navbar />
+  return(
+    <BrowserRouter>
+      <Navbar />
 
-        <Home charactersData={characters.characters} />
+      <Switch>
+        <Route path="/" exact>
+          <Home charactersData={charactersInfo} />
+        </Route>
 
-        <CharacterDetail charactersData={characters.characters} />
+        <Route path="/charDetail" exact>
+          <CharacterDetail charactersData={charactersInfo} />
+        </Route>
 
-        <About />
-      </>
-    )
-  }
+        <Route path="/charDetail/:idCharacter" >
+          <CharacterDetail charactersData={charactersInfo} />
+        </Route>
+        
+        <Route path="/about" exact>
+          <About />
+        </Route>
+      </Switch>
+    </BrowserRouter>  
+  )
 }
+
+//<CharacterDetail charactersData={charactersInfo} />
 
 export default App;
