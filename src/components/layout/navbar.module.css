@@ -1,0 +1,103 @@
+.navbar {
+    background-color: #24292f;
+    color: #fff;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navTitle {
+    display: flex;
+    width: 35%;
+    padding: 0;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navTitle:hover {
+    color: #cfcfcf;
+}
+
+.navTitle img {
+    width: 50px;
+}
+
+.navTitle h1 {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 20px;
+    font-size: 2em;
+    text-align: center;
+    font-weight: 500;
+}
+
+.navLinks {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+}
+
+.navLinks li {
+    display: inline-block;
+}
+
+.hoverTransform {
+    text-decoration: none;
+    color: #cfcfcf;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 1.2em;
+}
+
+.navLinkActive {
+    color: #ffffff;
+    font-style: italic;
+}
+
+.hoverTransform:hover {
+    color: #cfcfcf;
+}
+
+.hoverTransform::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #ff7a00;
+    border-radius: 100px;
+    bottom: -2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s;
+}
+
+.hoverTransform:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+@media only screen and (max-width : 900px) {
+    .navTitle {
+        width: 80%;
+    }
+    .navTitle h1 {
+        font-size: 1.2em;
+        width: 100%;
+    }
+    .navTitle img {
+        width: 30px;
+    }
+    .navLinks {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        font-size: .8em;
+    }
+    .navLinks li {
+        margin-top: 20px;
+    }
+}

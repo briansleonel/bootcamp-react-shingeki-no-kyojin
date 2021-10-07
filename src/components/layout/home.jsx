@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import Character from '../character/character';
 import isEmptyObject from "../../utils/utils-functions";
 
+import styles from './home.module.css';
+
 /*
     Componente de clase
 */
@@ -47,9 +49,9 @@ class Home extends React.Component {
         
         return(
             <>
-                <section className="home">
+                <section className={styles.home}>
                     <h3 className="title">Personajes</h3>
-                    <div className="home-characters">
+                    <div className={styles.homeCharacters}>
                         {characters}
                     </div>
                 </section>

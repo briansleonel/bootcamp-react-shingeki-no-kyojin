@@ -5,6 +5,8 @@ import CardCharacterSelected from "./card-character";
 import isEmptyObject from "../../utils/utils-functions";
 import data from '../../data/data.json';
 
+import styles from './character-detail.module.css'
+
 const CharacterDetail = (props) => {
 
     const params = useParams();
@@ -54,14 +56,14 @@ const CharacterDetail = (props) => {
         <>
             {
                 (!showWithParams) ? (
-                    <section className="character-details" id="character-details">
+                    <section className={styles.characterDetails} id="character-details">
                         <h4 className="title">Detalle de los personajes</h4> 
                         {
                             characterSelected !== null ? (
-                                <div className="character-details">
-                                    <form className="select-character" action="">
+                                <div className={styles.characterDetails}>
+                                    <form className={styles.selectCharacter} action="">
                                         <label htmlFor="characterDetail">Seleccione un personaje:</label>
-                                        <select className="select-character-form" name="characterDetail" id="characterDetail" onChange={event => onChangeSelect(event)}>
+                                        <select className={styles.selectCharacterForm} name="characterDetail" id="characterDetail" onChange={event => onChangeSelect(event)}>
                                             {charactersOptions}
                                         </select>
                                     </form>

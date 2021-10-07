@@ -1,0 +1,52 @@
+.characterDetails {
+    margin: 50px 0;
+}
+
+.selectCharacter {
+    width: 50%;
+    margin: 50px auto;
+    padding: 0 40px;
+    font-size: 1.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selectCharacter label {
+    width: 50%;
+    margin-right: 20px;
+    text-align: end;
+}
+
+.selectCharacterForm {
+    padding: 7px;
+    font-size: .8em;
+    width: 40%;
+}
+
+.selectCharacter div {
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width : 900px) {
+
+    .selectCharacter {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .selectCharacter label {
+        margin: 0;
+        text-align: center;
+        width: 80%;
+    }
+    
+    .selectCharacterForm {
+        margin-top: 20px;
+        padding: 7px;
+        font-size: .8em;
+        width: 80%;
+    }
+}

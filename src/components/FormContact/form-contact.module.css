@@ -1,0 +1,13 @@
+.textError {
+    color: #dc3545;
+    font-size: .8em;
+}
+
+.formContact {
+    margin-bottom: 3rem;
+}
+
+.button {
+    width: 100%;
+    margin-top: 2em;
+}

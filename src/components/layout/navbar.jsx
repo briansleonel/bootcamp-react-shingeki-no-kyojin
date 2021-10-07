@@ -1,9 +1,12 @@
 import React from "react";
-//import Link from "../link/link";
 import { Link, NavLink } from "react-router-dom";
 import logo from '../../assets/img/cuerpo-exploracion.png';
 
-class Navbar extends React.Component {
+import { Navbar, Container } from 'react-bootstrap';
+
+import styles from './navbar.module.css';
+
+class NavbarComponent extends React.Component {
     constructor(props) {
         super(props);
         this.props = props;
@@ -11,31 +14,30 @@ class Navbar extends React.Component {
 
     render() {
         return(
-            <nav>
-                <Link to="/" className="nav-title">
-                    <img src={logo} alt="" />
-                    <h1>Shingeki no Kyojin</h1>
-                </Link>
-                
-                <ul>
-                    <li>
-                        <NavLink to="/" exact className="hover-transform" activeClassName="navlink-active">Home</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/charDetail" className="hover-transform" activeClassName="navlink-active">Detalle de personajes</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/about" className="hover-transform" activeClassName="navlink-active">Acerca de</NavLink>
-                    </li>
-                </ul>
-            </nav>
+            <Navbar bg="dark" expand="lg">
+                <Container fluid>
+                    <Link to="/" className={styles.navTitle}>
+                        <img src={logo} alt="" />
+                        <h1>Shingeki no Kyojin</h1>
+                    </Link>
+                    <Navbar.Toggle aria-controls="navbarScroll" />
+                    <Navbar.Collapse id="navbarScroll">
+                    <ul className={styles.navLinks}>
+                        <li>
+                            <NavLink to="/" exact className={styles.hoverTransform} activeClassName={styles.navLinkActive} >Home</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/charDetail" className={styles.hoverTransform} activeClassName={styles.navLinkActive}>Detalle de personajes</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/about" className={styles.hoverTransform} activeClassName={styles.navLinkActive}>Acerca de</NavLink>
+                        </li>
+                    </ul>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
         )
     }
 }
 
-/*
-<Link link="#character-details" description="Detalle de personajes" />
-                    <Link link="#about" description="Acerca de" />
-*/
-
-export default Navbar;
+export default NavbarComponent;

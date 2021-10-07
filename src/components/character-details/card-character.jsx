@@ -1,5 +1,7 @@
 import React from "react";
 
+import styles from './card-character.module.css'
+
 const showArrayElements = (array) => array.map((element, index) => {
         return <li key={index}> {element} </li>;
 })
@@ -8,46 +10,46 @@ const CardCharacterSelected = (characterSelected) => {
     const {character} = characterSelected;
 
     return(
-        <div className="card-character-selected">
-            <div className="character-selected-img">
+        <div className={styles.cardCharacterSelected}>
+            <div className={styles.characterSelectedImg}>
                 <img src={character.photo} alt="" />
             </div>
 
-            <div className="character-selected-body">
+            <div className={styles.characterSelectedBody}>
                 <h4> {`${character.firstName} ${character.lastName}`} </h4>
 
                 <table>
                     <tbody>
                         <tr>
-                            <td className="element">Fecha de nacimiento:</td>
-                            <td className="content"> {character.dateBirth} </td>
+                            <td className={styles.element}>Fecha de nacimiento:</td>
+                            <td className={styles.content}> {character.dateBirth} </td>
                         </tr>
                         <tr>
-                            <td className="element">Especie:</td>
-                            <td className="content"> {character.species} </td>
+                            <td className={styles.element}>Especie:</td>
+                            <td className={styles.content}> {character.species} </td>
                         </tr>
                         <tr>
-                            <td className="element">Ocupación:</td>
-                            <td className="content"> {character.occupation} </td>
+                            <td className={styles.element}>Ocupación:</td>
+                            <td className={styles.content}> {character.occupation} </td>
                         </tr>
                         <tr>
-                            <td className="element">Titanes:</td>
-                            <td className="content">
-                                <ul className="element-ul"> {showArrayElements(character.titans)} </ul>
+                            <td className={styles.element}>Titanes:</td>
+                            <td className={styles.content}>
+                                <ul className={styles.elementUl}> {showArrayElements(character.titans)} </ul>
                             </td>
                         </tr>
                         <tr>
-                            <td className="element">Armas:</td>
-                            <td className="content">
-                                <ul className="element-ul"> {showArrayElements(character.weapons)} </ul>
+                            <td className={styles.element}>Armas:</td>
+                            <td className={styles.content}>
+                                <ul className={styles.elementUl}> {showArrayElements(character.weapons)} </ul>
                             </td>
                         </tr>
                     </tbody>
                 </table>
 
                 <blockquote>
-                    <p className="phrase"> "{character.phrase.description}"</p>
-                    <p className="context-phrase"> - {character.phrase.context} </p>
+                    <p className={styles.phrase}> "{character.phrase.description}"</p>
+                    <p className={styles.contextPhrase}> - {character.phrase.context} </p>
                 </blockquote>
             </div>
         </div>

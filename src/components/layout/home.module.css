@@ -1,0 +1,23 @@
+.home {
+    margin: 50px 0;
+}
+
+.homeCharacters {
+    margin: 30px;
+    padding: auto;
+    display: grid;
+    grid-template-columns: 22% 22% 22% 22%;
+    grid-gap: 50px;
+}
+
+@media only screen and (max-width : 900px) {
+
+    .homeCharacters {
+        margin: 30px;
+        padding: auto;
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 50px;
+    
+    }
+}
