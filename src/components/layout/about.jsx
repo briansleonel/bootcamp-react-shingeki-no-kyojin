@@ -36,6 +36,9 @@ const About = () => {
                     <p>
                         Instagram: <a href="https://www.instagram.com/briansleonel/" className={styles.links}>briansleonel</a>
                     </p>
+                    <p>
+                        Whatsapp: <a href="https://api.whatsapp.com/send/?phone=543884762196&text" className={styles.links}>click aquí</a>
+                    </p>
                 </Col>
             </Row>
 
