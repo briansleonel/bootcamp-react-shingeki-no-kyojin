@@ -33,6 +33,9 @@ const About = () => {
                     <p>
                         Github: <a href="https://github.com/briansleonel" className={styles.links}>briansleonel</a>
                     </p>
+                    <p>
+                        Instagram: <a href="https://www.instagram.com/briansleonel/" className={styles.links}>briansleonel</a>
+                    </p>
                 </Col>
             </Row>
 
