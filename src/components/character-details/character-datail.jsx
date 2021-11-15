@@ -18,7 +18,7 @@ const CharacterDetail = (props) => {
         if(params.idCharacter !== undefined) {
             setShowWithParams(true);
         } else {
-            setCharacterSelected(props.charactersData[0])
+            setCharacterSelected(data.characters[0])
         }
     }, [showWithParams, params, props]);
 
